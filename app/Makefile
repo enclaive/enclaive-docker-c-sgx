@@ -1,2 +1,2 @@
-app: main.cpp
+app: main.c
 	$(CXX) $^ -o $@

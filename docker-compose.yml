@@ -2,8 +2,8 @@ version: '2'
 
 services:
   cpp-sgx:
-    image: enclaive/cpp-sgx
-    container_name: "cpp-sgx"
+    image: enclaive/c-sgx
+    container_name: "c-sgx"
     build:
       context: .
     ports:
