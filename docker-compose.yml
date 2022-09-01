@@ -1,12 +1,23 @@
 version: '2'
 
 services:
-  cpp-sgx:
+  c-sgx:
     image: enclaive/c-sgx
     container_name: "c-sgx"
+    privileged: true
     build:
       context: .
-    ports:
-      - "443:443"
     devices:
       - "/dev/sgx_enclave:/dev/sgx_enclave"
+
+  c-nosgx:
+    image: enclaive/c-sgx
+    container_name: "c-nosgx"
+    privileged: true
+    build:
+      context: .
+    entrypoint: ""
+    command: "/app/app"
+    devices:
+      - "/dev/sgx_enclave:/dev/sgx_enclave"
+
