@@ -30,6 +30,17 @@
 </div>
 
 
+<!-- TL;TD --> 
+## TL;DR
+
+```sh
+docker pull enclaive/c-sgx
+#or
+docker-compose up -d
+```
+**Warning**: This quick setup is only intended for development environments. You are encouraged to change the insecure default credentials and check out the available configuration options in the [build](#build-the-image) section for a more secure deployment.
+
+
 <!-- INTRODCUTION -->
 ## What is C and SGX?
 
@@ -58,16 +69,6 @@ Following benefits come for free with C-SGX :
     * strictly better TOMs (technical and organizatorial measures)
     * privacy export regulations compliant deployment anywhere, such as [Schrems-II](https://www.europarl.europa.eu/RegData/etudes/ATAG/2020/652073/EPRS_ATA(2020)652073_EN.pdf)
     * GDPR/CCPA compliant processing ("data in use") of user data (in the cloud) as data is relatively anonymized thanks to the enclave
-
-<!-- TL;TD --> 
-## TL;DR
-
-```sh
-docker pull enclaive/c-sgx
-docker-compose up -d
-```
-**Warning**: This quick setup is only intended for development environments. You are encouraged to change the insecure default credentials and check out the available configuration options in the [build](#build-the-image) section for a more secure deployment.
-
 
 <!-- DEPLOY IN THE CLOUD -->
 ## How to deploy C-SGX in a zero-trust cloud?
@@ -150,7 +151,7 @@ docker build -t enclaive/c-sgx:latest 'https://github.com/enclaive/enclaive-dock
 
 ## Modify the image
 
-todo
+Add the C project to folder `/app`.
 
 <!-- RUN THE IMAGE -->
 ## Run the image
