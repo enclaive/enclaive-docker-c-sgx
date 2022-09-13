@@ -1,5 +1,4 @@
-SGX c++ demonstration
-
+# C-SGX Demonstration: Protecting the Kernel against Container Escapes 
 
 ## Building and Running
 
@@ -7,15 +6,15 @@ SGX c++ demonstration
 docker-compose up
 ```
 
-## observe that cpp-nosgx has access to the host kernel, but within cpp-sgx it does not
+## Observe that c-nosgx has access to the host kernel, but within c-sgx it does not
 
 ```sh
-cpp-nosgx    | going to look at your hosts kernel commandline:
-cpp-nosgx    |
-cpp-nosgx    | BOOT_IMAGE=/vmlinuz-5.15.0-46-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
+c-nosgx    | going to look at your hosts kernel commandline:
+c-nosgx    |
+c-nosgx    | BOOT_IMAGE=/vmlinuz-5.15.0-46-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro
 
-cpp-sgx      | going to look at your hosts kernel commandline:
-cpp-sgx      |
-cpp-sgx exited with code 0
+c-sgx      | going to look at your hosts kernel commandline:
+c-sgx      |
+c-sgx exited with code 0
 
 ```
